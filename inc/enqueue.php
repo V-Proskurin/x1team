@@ -32,8 +32,6 @@ function bootscore_scripts() {
     wp_enqueue_style('main', get_template_directory_uri() . '/css/main.css', array(), $modificated_bootscoreCss);
 
 
-    wp_enqueue_style('custom', get_template_directory_uri() . '/css/custom.css', array(), $modificated_bootscoreCss);
-
     // Style CSS
     wp_enqueue_style('bootscore-style', get_stylesheet_uri(), array(), $modificated_styleCss);
 
@@ -45,6 +43,8 @@ function bootscore_scripts() {
 
     // Theme JS
     wp_enqueue_script('bootscore-script', get_template_directory_uri() . '/js/theme.js', array('jquery'), $modificated_themeJs, true);
+
+    wp_enqueue_style('custom', get_template_directory_uri() . '/css/custom.css', array(), $modificated_bootscoreCss);
 
     // IE Warning
     wp_localize_script('bootscore-script', 'bootscore', array(

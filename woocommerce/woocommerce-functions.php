@@ -547,6 +547,7 @@ function update_product( $product_data ) {
     $product->set_price( $product_data['productPrice'] );
     $product->set_sale_price( $product_data['productPrice'] );
     $product->set_regular_price( $product_data['productRegularPrice'] );
+    $product->update_meta_data('product_link_video', $product_data['productVideo']);
 
     $product->save();
 

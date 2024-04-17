@@ -58,9 +58,10 @@ jQuery(function ($) {
                     'productRegularPrice': $('[name="product-regular-price"]').val(),
                     'productCategory': productCategory,
                     'productImages': imagesId,
+                    'productVideo': $('[name="product-video"]').val(),
                 }
             }).done(data => {
-                window.location = data;
+                window.location.reload();
             }).fail(data => {
                 //console.log(data);
             })
