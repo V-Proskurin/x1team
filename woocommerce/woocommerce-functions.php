@@ -356,10 +356,8 @@ function create_vendor_product() {
     wp_set_object_terms( $product_id, array($product_data['vendor_id']), 'yith_shop_vendor', false);
 
     if ( isset($product_data['create_chat']) ) {
+        $_POST['parent_id'] = 0;
         $create_group = \ProjectChat\Classes\GroupClass::create_group( $product_data['title'], $product_id, get_current_user_id(), 'closed' );
-        if ( $create_group['success'] ) {
-            \ProjectChat\Classes\FilterClass::add_favorite_link( $create_group['group_id'], $product_id, 'group' );
-        }
     }
     echo get_post_permalink( $product_id );
     // var_dump('done');
