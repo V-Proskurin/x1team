@@ -34,3 +34,26 @@
     opacity: 1;
     border: solid 2px var(--bs-btn-close-color);
 }
+.my-auto {
+    margin-top: 0 !important;
+}
+.pch-vertical-menu {
+    position: fixed !important;
+}
+.body .pch-burger-icon {
+    height: 18px !important;
+}
+.pch-more-list {
+    display: block;
+    max-width: 150px;
+}
+.modal {
+    background: rgba(0,0,0,0.5)
+}
+.modal-content {
+    width: 30vw !important;
+    margin: 0 auto;
+}
+.users_search_list {
+    margin-top: 15px;
+}
