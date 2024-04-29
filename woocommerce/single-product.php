@@ -785,6 +785,278 @@ $total_count = count( $gallery_attachment_ids );
                         </div>
                     </div>
                 </div>
+                <!--Блок Готовые решения - Чат --> 
+                <div class="row">
+                    <div class="col-4">
+                        <div class="pch-project-chat hide">
+                            <div class="border-top my-3"></div>
+                            <h3 class="text-uppercase">проектчат</h3>
+                            <ul class="list ps-0">
+                                <li class="mb-2">
+                                <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#home-collapse22" aria-expanded="false">
+                                стеклянные перегородки для коттеджей
+                                </button>
+                                <div class="collapse" id="home-collapse22">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a></li>
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Reports</a></li>
+                                    </ul>
+                                </div>
+                                </li>
+                                <li class="mb-2">
+                                <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse23" aria-expanded="false">
+                                стеклянные перегородки для бань и саун
+                                </button>
+                                <div class="collapse" id="dashboard-collapse23">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a></li>
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</a></li>
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</a></li>
+                                    </ul>
+                                </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        
+                        <div class="ready-made-solutions mt-4">
+                            <h2 class="display-5 text-primary fw-bold mt-md-0 my-4">Готовые решения</h2>
+                            <nav aria-label="breadcrumb" class="wc-breadcrumb breadcrumb-scroller pb-2">
+                                <ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="http://datsu-marketplace">Главная</a></li><li class="breadcrumb-item"><a href="http://datsu-marketplace/shop/">Проектчат</a></li><li class="breadcrumb-item"><a href="http://datsu-marketplace/product-category/truba-ne-rjavejushaya/">Установка стеклянного козырька за 30 минут</a></li></ol>
+                            </nav>
+
+                            <div class="d-flex justify-content-between align-items-start mb-2" style=
+                            "height: 44px;">
+                                <span class="text-secondary">Открытый канал</span> 
+                                <div class="d-flex align-items-start gap-3">
+                                    
+                                    <div class="pch-chat-menu">
+                                        <div class="text-end">
+                                            <a href="" role="button" class="ms-1 ms-md-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-search" aria-expanded="false" aria-controls="collapse-search">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_1556_3291)">
+                                                    <path d="M14.6786 12.9291C15.889 11.2775 16.4311 9.22976 16.1965 7.19559C15.9619 5.16141 14.9679 3.29082 13.4133 1.95806C11.8588 0.6253 9.85831 -0.0713465 7.81217 0.00749495C5.76603 0.0863364 3.8251 0.934852 2.37771 2.38328C0.930312 3.83172 0.0831854 5.77325 0.00580817 7.81944C-0.0715691 9.86564 0.626509 11.8656 1.96038 13.4192C3.29425 14.9728 5.16555 15.9655 7.1999 16.1986C9.23424 16.4318 11.2816 15.8882 12.9324 14.6766H12.9311C12.9686 14.7266 13.0086 14.7742 13.0536 14.8204L17.8661 19.6329C18.1005 19.8675 18.4185 19.9993 18.7501 19.9994C19.0816 19.9995 19.3997 19.8679 19.6342 19.6335C19.8688 19.3991 20.0006 19.0812 20.0007 18.7496C20.0009 18.418 19.8693 18.1 19.6349 17.8654L14.8224 13.0529C14.7777 13.0077 14.7296 12.9659 14.6786 12.9279V12.9291ZM15.0011 8.12415C15.0011 9.02699 14.8233 9.92099 14.4778 10.7551C14.1323 11.5892 13.6259 12.3471 12.9875 12.9855C12.3491 13.6239 11.5912 14.1303 10.7571 14.4758C9.92296 14.8213 9.02896 14.9992 8.12612 14.9992C7.22328 14.9992 6.32929 14.8213 5.49517 14.4758C4.66106 14.1303 3.90317 13.6239 3.26476 12.9855C2.62636 12.3471 2.11995 11.5892 1.77445 10.7551C1.42895 9.92099 1.25112 9.02699 1.25112 8.12415C1.25112 6.30079 1.97545 4.5521 3.26476 3.26279C4.55408 1.97348 6.30276 1.24915 8.12612 1.24915C9.94948 1.24915 11.6982 1.97348 12.9875 3.26279C14.2768 4.5521 15.0011 6.30079 15.0011 8.12415Z" fill="#262626"/>
+                                                    </g>
+                                                    <defs>
+                                                    <clipPath id="clip0_1556_3291">
+                                                    <rect width="20" height="20" fill="white"/>
+                                                    </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <span class="visually-hidden-focusable">Search</span>
+                                            </a>
+                                            
+                                            <a class="collapsed ps-1" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.125 15C3.125 14.8342 3.19085 14.6753 3.30806 14.5581C3.42527 14.4408 3.58424 14.375 3.75 14.375H16.25C16.4158 14.375 16.5747 14.4408 16.6919 14.5581C16.8092 14.6753 16.875 14.8342 16.875 15C16.875 15.1658 16.8092 15.3247 16.6919 15.4419C16.5747 15.5592 16.4158 15.625 16.25 15.625H3.75C3.58424 15.625 3.42527 15.5592 3.30806 15.4419C3.19085 15.3247 3.125 15.1658 3.125 15ZM3.125 10C3.125 9.83424 3.19085 9.67527 3.30806 9.55806C3.42527 9.44085 3.58424 9.375 3.75 9.375H16.25C16.4158 9.375 16.5747 9.44085 16.6919 9.55806C16.8092 9.67527 16.875 9.83424 16.875 10C16.875 10.1658 16.8092 10.3247 16.6919 10.4419C16.5747 10.5592 16.4158 10.625 16.25 10.625H3.75C3.58424 10.625 3.42527 10.5592 3.30806 10.4419C3.19085 10.3247 3.125 10.1658 3.125 10ZM3.125 5C3.125 4.83424 3.19085 4.67527 3.30806 4.55806C3.42527 4.44085 3.58424 4.375 3.75 4.375H16.25C16.4158 4.375 16.5747 4.44085 16.6919 4.55806C16.8092 4.67527 16.875 4.83424 16.875 5C16.875 5.16576 16.8092 5.32473 16.6919 5.44194C16.5747 5.55915 16.4158 5.625 16.25 5.625H3.75C3.58424 5.625 3.42527 5.55915 3.30806 5.44194C3.19085 5.32473 3.125 5.16576 3.125 5Z" fill="#262626"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="collapse" id="collapseExample" style="">
+                                            <div class="card card-body px-0">
+                                                <ul class="mb-0">
+                                                    <li>
+                                                        <a class="" href="#">Action</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="" href="#">Another action</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="pch-project-chat d-lg-none d-block px-0">
+                                                    <div class="border-top my-3"></div>
+                                                    <h3 class="text-uppercase fs-4 px-3">проектчат</h3>
+                                                    <ul class="list ps-0">
+                                                        <li class="mb-2">
+                                                        <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#home-collapse22" aria-expanded="false">
+                                                        стеклянные перегородки для коттеджей
+                                                        </button>
+                                                        <div class="collapse" id="home-collapse22">
+                                                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
+                                                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a></li>
+                                                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Reports</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        </li>
+                                                        <li class="mb-2">
+                                                        <button class="btn btn-toggle d-inline-flex align-items-center border-0 collapsed text-uppercase text-start fs-6" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse23" aria-expanded="false">
+                                                        стеклянные перегородки для бань и саун
+                                                        </button>
+                                                        <div class="collapse" id="dashboard-collapse23">
+                                                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
+                                                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a></li>
+                                                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</a></li>
+                                                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input class="search-field field form-control collapse" type="search" id="collapse-search" placeholder="Поиск…" value="" name="s" class="collapse">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Проект Чат -->
+                            <div class="pch-chat pt-3">
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <div>
+                                            <p class="text-secondary mb-2">@Константин Комков</p>
+                                            <p class="text-secondary mb-0">03.07.2022</p>
+                                        </div>				
+                                        <div class="dropdown"> 
+                                            <button class="btn btn-secondary dropdown-toggle me-1 mb-1" type="button" id="dropdownRightMenuButtonDots" data-bs-toggle="dropdown" aria-expanded="false"> 
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5 10C5.53043 10 6.03914 10.2107 6.41421 10.5858C6.78929 10.9609 7 11.4696 7 12C7 12.5304 6.78929 13.0391 6.41421 13.4142C6.03914 13.7893 5.53043 14 5 14C4.46957 14 3.96086 13.7893 3.58579 13.4142C3.21071 13.0391 3 12.5304 3 12C3 11.4696 3.21071 10.9609 3.58579 10.5858C3.96086 10.2107 4.46957 10 5 10ZM12 10C12.5304 10 13.0391 10.2107 13.4142 10.5858C13.7893 10.9609 14 11.4696 14 12C14 12.5304 13.7893 13.0391 13.4142 13.4142C13.0391 13.7893 12.5304 14 12 14C11.4696 14 10.9609 13.7893 10.5858 13.4142C10.2107 13.0391 10 12.5304 10 12C10 11.4696 10.2107 10.9609 10.5858 10.5858C10.9609 10.2107 11.4696 10 12 10ZM19 10C19.5304 10 20.0391 10.2107 20.4142 10.5858C20.7893 10.9609 21 11.4696 21 12C21 12.5304 20.7893 13.0391 20.4142 13.4142C20.0391 13.7893 19.5304 14 19 14C18.4696 14 17.9609 13.7893 17.5858 13.4142C17.2107 13.0391 17 12.5304 17 12C17 11.4696 17.2107 10.9609 17.5858 10.5858C17.9609 10.2107 18.4696 10 19 10Z" fill="black"/>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownRightMenuButtonDots" style="">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="pch-chat-gallery">
+                                                <div class="row w-100 mx-auto">
+                                                    <div class="col-6 px-0">
+                                                        <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery-chat/1.jpg" alt="">
+                                                    </div>
+                                                    <div class="col-6 px-0">
+                                                        <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery-chat/2.jpg" alt="">
+                                                    </div>
+                                                    <div class="col-6 px-0">
+                                                        <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery-chat/3.jpg" alt="">
+                                                    </div>
+                                                    <div class="col-6 px-0">
+                                                        <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/gallery-chat/4.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p class="fw-bold mt-md-0 mt-5 mb-4">Друзья, всем привет!</p>
+                                            <p class="mb-4">В сентябре 2024 года мы проводим конференцию Datsu.</p>
+                                            <p class="mb-4">В этом чате мы приглашаем игроков, гостей и  предпринимателей принять в ней участие. </p>
+                                            <p class="mb-4">Ставьте лайки, делитесь идеями и откликайтесь предложениями на заказы организаторов</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <div>
+                                            <p class="text-secondary mb-2">@Константин Комков</p>
+                                            <p class="text-secondary mb-0">03.07.2022</p>
+                                        </div>				
+                                        <div class="dropdown"> 
+                                            <button class="btn btn-secondary dropdown-toggle me-1 mb-1" type="button" id="dropdownRightMenuButtonDots" data-bs-toggle="dropdown" aria-expanded="false"> 
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5 10C5.53043 10 6.03914 10.2107 6.41421 10.5858C6.78929 10.9609 7 11.4696 7 12C7 12.5304 6.78929 13.0391 6.41421 13.4142C6.03914 13.7893 5.53043 14 5 14C4.46957 14 3.96086 13.7893 3.58579 13.4142C3.21071 13.0391 3 12.5304 3 12C3 11.4696 3.21071 10.9609 3.58579 10.5858C3.96086 10.2107 4.46957 10 5 10ZM12 10C12.5304 10 13.0391 10.2107 13.4142 10.5858C13.7893 10.9609 14 11.4696 14 12C14 12.5304 13.7893 13.0391 13.4142 13.4142C13.0391 13.7893 12.5304 14 12 14C11.4696 14 10.9609 13.7893 10.5858 13.4142C10.2107 13.0391 10 12.5304 10 12C10 11.4696 10.2107 10.9609 10.5858 10.5858C10.9609 10.2107 11.4696 10 12 10ZM19 10C19.5304 10 20.0391 10.2107 20.4142 10.5858C20.7893 10.9609 21 11.4696 21 12C21 12.5304 20.7893 13.0391 20.4142 13.4142C20.0391 13.7893 19.5304 14 19 14C18.4696 14 17.9609 13.7893 17.5858 13.4142C17.2107 13.0391 17 12.5304 17 12C17 11.4696 17.2107 10.9609 17.5858 10.5858C17.9609 10.2107 18.4696 10 19 10Z" fill="black"/>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownRightMenuButtonDots" style="">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="pch-chat-image">
+                                        <img class="img-fluid" src="<?= get_stylesheet_directory_uri(); ?>/img/gallery-chat/big-img.jpg" alt="">
+                                    </div>
+                                    <div class="pch-chat-descr mt-4">
+                                        <p class="pch-chat-title fw-bold">Гостям праздника:</p>
+                                        <p>Узнать полезную информацию, обсудить и предложить идеи, принять участие в конкурсах или даже стать ведущим!!!</p>
+                                        <p>Ниже мы составили список групп по тематикам. Если будут вопросы, не стесняйтесь их задавать нашей группе поддержки и конечно нашему чат боту <span class="text-primary">@Kudabot</span></p>
+                                        <ul>
+                                            <li>
+                                                <a class="pch-chat-item" href="#">Расписание и программа</a>
+                                                <span class="pch-chat-group">открытая группа</span>
+                                            </li>
+                                            <li>
+                                                <a class="pch-chat-item" href="#">Еда</a>
+                                                <span class="pch-chat-group">открытая группа</span>
+                                            </li>
+                                            <li>
+                                                <a class="pch-chat-item" href="#">Хочу заработать</a>
+                                                <span class="pch-chat-group">открытая группа</span>
+                                            </li>   
+                                        </ul>
+                                    </div>
+                                    <div class="mt-5">
+                                        <div class="d-flex flex-md-nowrap flex-wrap gap-md-0 gap-4 mb-5">
+                                            <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/gallery-chat/card-img1.jpg" alt="" style="width: 122px;"></div>
+                                            <div class="flex-grow-1 py-0">
+                                                <div class="row g-3"> 
+                                                    <div class="col-xl-8 col-lg-7">
+                                                        <a class="d-block fw-semibold fs-6 mb-3" href="">Купить билет на главное вечернее шоу фестиваля</a>
+                                                        <p>Скидка 50% за 3 месяца до начала праздника и VIP обслуживание  ...</p>
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-5">
+                                                        <div class="mt-auto text-lg-center">
+                                                            <h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
+                                                            <span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
+                                                        </div> 
+                                                        <div class="mrk-cart d-flex align-items-center justify-content-lg-end">
+                                                            <div class="mrk-cart-quantity">
+                                                                <a href="#" class="btn btn-primary btn-order w-100">
+                                                                    <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
+                                                                    В корзину
+                                                                </a>
+                                                            </div>
+                                                            <div class="mrk-card-heart no-active ms-xl-3 ms-2"></div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-md-nowrap flex-wrap gap-md-0 gap-4 mb-5">
+                                            <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/gallery-chat/card-img2.jpg" alt="" style="width: 122px;"></div>
+                                            <div class="flex-grow-1 py-0">
+                                                <div class="row g-3"> 
+                                                    <div class="col-xl-8 col-lg-7">
+                                                        <a class="d-block fw-semibold fs-6 mb-3" href="">Купить билет на главное вечернее шоу фестиваля</a>
+                                                        <p>Скидка 50% за 3 месяца до начала праздника и VIP обслуживание  ...</p>
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-5">
+                                                        <div class="mt-auto text-lg-center">
+                                                            <h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
+                                                            <span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
+                                                        </div> 
+                                                        <div class="mrk-cart d-flex align-items-center justify-content-lg-end">
+                                                            <div class="mrk-cart-quantity">
+                                                                <a href="#" class="btn btn-primary btn-order w-100">
+                                                                    <img class="mx-auto pe-1" src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/svg/cart4-white.svg" alt="корзина">
+                                                                В корзину
+                                                                </a>
+                                                            </div>
+                                                            <div class="mrk-card-heart no-active ms-xl-3 ms-2"></div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="row gap-lg-0 gap-5 mt-4 pt-5 d-none">
@@ -800,7 +1072,6 @@ $total_count = count( $gallery_attachment_ids );
                     </div>
                 </div>
                 <div class="col-lg-9">
-
                     <div class="row">
                         <h2 class="block-title pb-md-5 pb-3">Предложения других продавцов</h2>
                         <div class="d-lg-block">
