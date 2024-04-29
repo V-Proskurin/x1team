@@ -786,9 +786,9 @@ $total_count = count( $gallery_attachment_ids );
                     </div>
                 </div>
                 <!--Блок Готовые решения - Чат --> 
-                <div class="row">
-                    <div class="col-4">
-                        <div class="pch-project-chat hide">
+                <div class="row mx-0 px-0">
+                    <div class="col-lg-4 ps-0">
+                        <div class="pch-project-chat hide ps-0 w-100">
                             <div class="border-top my-3"></div>
                             <h3 class="text-uppercase">проектчат</h3>
                             <ul class="list ps-0">
@@ -820,7 +820,7 @@ $total_count = count( $gallery_attachment_ids );
                             </ul>
                         </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-lg-8 pe-0">
                         
                         <div class="ready-made-solutions mt-4">
                             <h2 class="display-5 text-primary fw-bold mt-md-0 my-4">Готовые решения</h2>

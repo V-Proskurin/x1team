@@ -426,6 +426,7 @@ jQuery(function ($) {
   if ($('.ready-made-solutions').length) {
     $('.pch-project-chat').removeClass('hide')
     $('.pch-project-chat').addClass('d-lg-block')
+    $('.pch-project-chat.d-lg-block').addClass('d-none')
     $(window).on('scroll',function(){
         let result
         var smallScreen = window.matchMedia("(min-width: 992px)");

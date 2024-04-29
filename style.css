@@ -982,6 +982,16 @@ details > summary:first-of-type {
   top: 20px;
   max-width: 310px;
 }
+.pch-project-chat .list {
+  display: block;
+}
+.pch-project-chat .btn-toggle::before {
+  margin-right: 15px;
+  line-height: 0;
+  content: url(./img/svg/arrow-list.svg);
+  transition: transform .35s ease;
+  transform-origin: 0.5em 50%;
+}
 .pch-chat-menu {
   max-width: 280px;
 }
