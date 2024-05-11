@@ -805,7 +805,7 @@ $total_count = count( $gallery_attachment_ids );
               </div>
             </div>
             <div class="col-lg-9">
-
+              
               <div class="row">
                 <h2 class="block-title pb-md-5 pb-3">Предложения других продавцов</h2>
                 <div class="d-lg-block">
