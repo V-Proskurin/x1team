@@ -51,7 +51,7 @@
     background: rgba(0,0,0,0.5)
 }
 .modal-content {
-    width: 30vw !important;
+    /* width: 30vw !important; */
     margin: 0 auto;
 }
 .users_search_list {
