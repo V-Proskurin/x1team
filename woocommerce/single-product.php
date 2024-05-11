@@ -410,118 +410,137 @@ $total_count = count( $gallery_attachment_ids );
 
                     <!-- слайдер с табами изображениями - НАЧАЛО -->
                     <div class="col-lg-7">
-                        <div class="row justify-content-center">
-                            <div class="slider ps-xl-0 px-0">
-                                <div class="swiper slider__images slider__images--main slider__images-cotalog">
-                                    <div class="swiper-wrapper">
-                                        <?php
-                                        if ( $product_video) {
-                                            if ($total_count > 1) {
-                                                ?>
-                                                <div class="swiper-slide" data-slider="1" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?php echo $product_video; ?>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0">
-                                                    <div class="youtube ratio ratio-16x9 h-100">
-                                                        <iframe class="iframe object-fit-cover" src="<?php echo $product_video; ?>" frameborder="0" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="fullscrin" data-slider="1" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?php echo $product_video; ?>?rel=0&amp;autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="увеличить окно просмотра" frameborder="0">
-                                                        <svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                                            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
-                                                            <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <?php
-                                            } else {?>
-                                                <div class="swiper-slide" data-slider="1" data-bs-toggle="modal" data-bs-target="#backdrop-video" data-bs-gallery="<?php echo $product_video; ?>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0">
-                                                    <div class="youtube ratio ratio-16x9 video-one h-100">
-                                                        <iframe class="iframe object-fit-cover" src="<?php echo $product_video; ?>" frameborder="0" allowfullscreen></iframe>
-                                                    </div>
-                                                    <div class="fullscrin" data-slider="1" data-bs-toggle="modal" data-bs-target="#backdrop-video" data-bs-gallery="<?php echo $product_video; ?>?rel=0&amp;autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="увеличить окно просмотра" frameborder="0">
-                                                        <svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                                            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
-                                                            <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            <? }
-                                        }
-                                        if ( $gallery_attachment_ids) {
-                                            foreach ($gallery_attachment_ids as $gallery_attachment_id) {
-                                                if ($total_count > 1) {
-                                                    ?>
-                                                    <div class="swiper-slide" data-slider="2" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
-                                                        <div class="image-4x3"><img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="image"><div class="fullscrin" data-slider="2" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
-                                                                <svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                                                    <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
-                                                                    <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
-                                                                </svg>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <?php
-                                                } else {
-                                                    ?>
-                                                    <div class="swiper-slide" data-slider="2" data-bs-toggle="modal" data-bs-target="#backdrop-image" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
-                                                        <div class="image-4x3 image-one">
-                                                            <img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="image">
-                                                            <div class="fullscrin" data-slider="2" data-bs-toggle="modal" data-bs-target="#backdrop-image" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
-                                                                <svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                                                    <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
-                                                                    <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
-                                                                </svg>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <?php
-                                                }
-                                            }}
-                                        ?>
+                    <div class="row justify-content-xl-start justify-content-center">
+							<?php if ( $product_video) { ?> 
+								<div class="slider slider-horizontal">
+								<? } else { ?> 
+								<div class="slider slider-vertical">
+								<? } ?>
+								<div class="swiper slider__images order-2 slider__images--main slider__images-cotalog">
+									<div class="swiper-wrapper">
+										<?php if ( $product_video) {
+											if ($total_count > 1) {
+											?>
+											<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?php echo $product_video; ?>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0">
+												<div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+													<div class="mrk-hit">хит</div>
+													<div class="mrk-new">новинка</div>
+												</div>
+												<div class="youtube ratio ratio-16x9 h-100">
+													<iframe class="iframe object-fit-cover" src="<?php echo $product_video; ?>" frameborder="0" allowfullscreen></iframe>
+												</div>
+												<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?php echo $product_video; ?>?rel=0&amp;autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="увеличить окно просмотра" frameborder="0">
+													<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+													<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
+													<path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
+													</svg>
+												</div>
+											</div>
+											<?php
+											} else {?>
+											<div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+												<div class="mrk-hit">хит</div>
+												<div class="mrk-new">новинка</div>
+											</div>
+											<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-video" data-bs-gallery="<?php echo $product_video; ?>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0">
+												<div class="youtube ratio ratio-16x9 video-one h-100">
+													<iframe class="iframe object-fit-cover" src="<?php echo $product_video; ?>" frameborder="0" allowfullscreen></iframe>
+												</div>
+												<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-video" data-bs-gallery="<?php echo $product_video; ?>?rel=0&amp;autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="увеличить окно просмотра" frameborder="0">
+													<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+													<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
+													<path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
+													</svg>
+												</div>
+											</div>
+										<? }
+										}
+										if ( $gallery_attachment_ids) {
+											foreach ($gallery_attachment_ids as $gallery_attachment_id) {
+												if ($total_count > 1) {
+												?>
+												<div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+													<div class="mrk-hit">хит</div>
+													<div class="mrk-new">новинка</div>
+												</div>
+												<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
+													<div class="image-4x3"><img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="image">
+														<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-1" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
+															<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+															<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
+															<path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
+															</svg>
+														</div>
+													</div>
+												</div>
+												<?php
+												} else {
+												?>
+												<div class="position-absolute start-0 top-0 mt-2 ms-2 text-start">
+													<div class="mrk-hit">хит</div>
+													<div class="mrk-new">новинка</div>
+												</div>
+												<div class="swiper-slide" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-image" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
+													<div class="image-4x3 image-one">
+														<img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="image">
+														<div class="fullscrin" data-slider="0" data-bs-toggle="modal" data-bs-target="#backdrop-image" data-bs-gallery="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" title="увеличить окно просмотра">
+															<svg class="bi bi-aspect-ratio bg-opacity-75 text-bg-secondary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+																<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
+																<path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path>
+															</svg>
+														</div>
+													</div>
+												</div>
+												<?php }
+											}
+										} ?>
 
-                                    </div>
-                                    <div class="swiper-button-prev text-white rounded"> </div>
-                                    <div class="swiper-button-next text-white rounded"></div>
-                                </div>
-                                <div class="slider-thumb d-flex px-md-0 px-2 mt-lg-0 mt-1">
-                                    <div class="swiper slider-thumb__images slider-thumb__images--main" thumbsSlider="" style="--swiper-navigation-color:#000;--swiper-pagination-color:#000">
-                                        <div class="swiper-wrapper">
-                                            <?php
-                                            if ( $product_video) {
-                                                if ($total_count > 1) {
-                                                    ?>
-                                                    <div class="swiper-slide youtube ratio slide-horizontal">
-                                                        <iframe class="iframe" width="560" height="315" src="<?php echo $product_video; ?>" title="YouTube video" frameborder="0"></iframe>
-                                                        <!-- <video class="iframe object-fit-cover" autoplay muted loop poster="<?= get_stylesheet_directory_uri(); ?>/img/video-thumb.png">
-                              <source src="<?= get_stylesheet_directory_uri(); ?>/assets/video-thumb.webm" type="video/webm">
-                              <source src="<?= get_stylesheet_directory_uri(); ?>/assets/video-thumb.mp4" type="video/mp4">
-                            </video> -->
-                                                        <!-- <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/WAl60Fn--SQ?si=fDU1jMa6qKpuCmjg" title="YouTube video" frameborder="0"></iframe> -->
-                                                    </div>
+									</div>
+									<div class="swiper-button-prev text-white rounded"> </div>
+									<div class="swiper-button-next text-white rounded"></div>
+								</div>
+								<div class="slider-thumb order-1 d-flex px-md-0 px-2">
+									<div class="swiper slider-thumb__images slider-thumb__images--main" thumbsSlider="" style="--swiper-navigation-color:#000;--swiper-pagination-color:#000">
+										<div class="swiper-wrapper">
+											<?php
+											if ( $product_video) {
+												if ($total_count > 1) {
+												?>
+												<div class="swiper-slide youtube ratio slide-horizontal">
+													<iframe class="iframe" width="560" height="315" src="<?php echo $product_video; ?>" title="YouTube video" frameborder="0"></iframe>
+													<!-- <video class="iframe object-fit-cover" autoplay muted loop poster="<?= get_stylesheet_directory_uri(); ?>/img/video-thumb.png">
+													<source src="<?= get_stylesheet_directory_uri(); ?>/assets/video-thumb.webm" type="video/webm">
+													<source src="<?= get_stylesheet_directory_uri(); ?>/assets/video-thumb.mp4" type="video/mp4">
+													</video> -->
+													<!-- <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/WAl60Fn--SQ?si=fDU1jMa6qKpuCmjg" title="YouTube video" frameborder="0"></iframe> -->
+												</div>
 
-                                                <?php }
-                                                else { ?>
-                                                    <div class="swiper-slide youtube ratio slide-horizontal"></div>
-                                                <?php }
-                                            }
+												<?php }
+												else { ?>
+												<div class="swiper-slide youtube ratio slide-horizontal"></div>
+												<?php }
+											}
 
-                                            if ( $gallery_attachment_ids) {
-                                                foreach ($gallery_attachment_ids as $gallery_attachment_id) {
-                                                    if ($total_count > 1) {
-                                                        ?>
-                                                        <div class="swiper-slide swiper-item"><img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'thumb' ); ?>" alt="thumb"></div>
+											if ( $gallery_attachment_ids) {
+												foreach ($gallery_attachment_ids as $gallery_attachment_id) {
+												if ($total_count > 1) {
+												?>
+													<div class="swiper-slide swiper-item"><img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'thumb' ); ?>" alt="thumb"></div>
 
-                                                        <?php
-                                                    } else {
-                                                        ?>
-                                                        <div class="swiper-slide swiper-item"></div>
-
-                                                        <?php
-                                                    }}
-                                            }
-                                            ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+												<?php
+												} else {  
+												?>
+													<div class="swiper-slide swiper-item"></div>
+													
+												<?php
+												}}
+											}
+											?>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
                     </div>
                     <div class="col-lg-5 my-auto">
                         <div class="card card-body border-0 mt-lg-0 mt-md-5 mt-4 pt-lg-0 pt-md-5 py-0 px-lg-3 px-0">
@@ -1485,7 +1504,6 @@ $total_count = count( $gallery_attachment_ids );
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
             <div class="col-lg-9">
               
               <div class="row">
@@ -1902,9 +1920,6 @@ $total_count = count( $gallery_attachment_ids );
             </div>
           </div>
       </div>
-=======
-        </div>
->>>>>>> 203d4a83c763ad6a29ad39c52d8b977b8d880ea2
     </main>
     <div class="modal fade" id="backdrop-1" tabindex="-1" role="dialog" aria-labelledby="backdrop-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-fullscreen">
@@ -1914,35 +1929,27 @@ $total_count = count( $gallery_attachment_ids );
                 </div>
                 <div class="modal-body p-0">
                     <div class="carousel slide slider__images--modal carousel-fade h-100" id="carouselButtons-1">
-                        <div class="carousel-inner">
-                            <?php
-                            if ( $product_video) {
-                                ?>
-                                <div class="carousel-item bg-white active">
-                                    <div class="youtube ratio ratio-16x9">
-                                        <iframe class="iframe object-fit-cover" src="<?php echo $product_video; ?>" allow="autoplay;" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            <?php }
+                    <div class="carousel-inner">
+                        <?php
+                        if ( $product_video) {
+                        ?>
+                        <div class="carousel-item bg-white active">
+                            <div class="youtube ratio ratio-16x9">
+                            <iframe class="iframe object-fit-cover" src="<?php echo $product_video; ?>" allow="autoplay;" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <?php }
                             if ( $gallery_attachment_ids ) {
                                 foreach ($gallery_attachment_ids as $gallery_attachment_id) {
-                                    ?>
+                                ?>
                                     <div class="carousel-item d-flex justify-content-center align-items-center bg-white">
-                                        <div class="image-4x3"><img class="img-fluid py-md-3" src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="..."></div>
+                                    <div class="image-4x3"><img class="img-fluid py-md-3" src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="..."></div>
                                     </div>
                                 <?php }
                             }
-                            if (!$product_video && $gallery_attachment_ids) {
-                                foreach ($gallery_attachment_ids as $gallery_attachment_id) {
-                                    ?>
-                                    <div class="carousel-item d-flex justify-content-center align-items-center bg-white active">
-                                        <div class="image-4x3"><img class="img-fluid py-md-3" src="<?= wp_get_attachment_url( $gallery_attachment_id, 'full' ); ?>" alt="..."></div>
-                                    </div>
-                                <?php }
-                            }
-                            ?>
+                        ?>
 
-                        </div>
+                    </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselButtons-1" data-bs-slide="prev"><span class="carousel-control-prev-icon text-bg-dark rounded" aria-hidden="true"></span><span class="visually-hidden">Предыдущий</span></button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselButtons-1" data-bs-slide="next"><span class="carousel-control-next-icon text-bg-dark rounded" aria-hidden="true"></span><span class="visually-hidden">Следующий</span></button>
                     </div>
