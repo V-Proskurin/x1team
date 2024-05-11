@@ -863,6 +863,7 @@ body .modal .carousel-control-next, body .modal  .carousel-control-prev {
 
   .slider-vertical .slider__images .swiper-wrapper {
     align-items: center!important;
+    min-height: 100%;
     /* height: 300px; */
 }
 
