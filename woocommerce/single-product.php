@@ -410,7 +410,7 @@ $total_count = count( $gallery_attachment_ids );
 
                     <!-- слайдер с табами изображениями - НАЧАЛО -->
                     <div class="col-lg-7">
-                    <div class="row justify-content-xl-start justify-content-center">
+                        <div class="row justify-content-xl-start justify-content-center">
 							<?php if ( $product_video) { ?> 
 								<div class="slider slider-horizontal">
 								<? } else { ?> 

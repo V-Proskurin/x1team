@@ -599,6 +599,7 @@ background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%
 
 .slider.slider-vertical .slider__images .swiper-slide .image-4x3 {
   position: relative;
+  display: flex;
   height: 100%;
   /* max-height: 34rem; */
 }
