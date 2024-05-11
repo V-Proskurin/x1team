@@ -420,6 +420,55 @@ if (staticBackdrop) {
     modalBodyImg.src = recipient
   })
 }
+
+jQuery(function ($) {
+  // Чат
+  if ($('.ready-made-solutions').length) {
+    $('.pch-project-chat').removeClass('hide')
+    $('.pch-project-chat').addClass('d-lg-block')
+    $('.pch-project-chat.d-lg-block').addClass('d-none')
+    $(window).on('scroll',function(){
+        let result
+        var smallScreen = window.matchMedia("(min-width: 992px)");
+        if (smallScreen.matches){
+            result = $('.ready-made-solutions').position().top
+            $('.pch-project-chat').css('margin-top', result)
+        } else {
+            $('.pch-project-chat').css('margin-top', '0')
+        }
+        
+      })
+      $(window).trigger('scroll')
+  } else {
+    $('.pch-project-chat').removeClass('d-lg-block')
+    $('.pch-project-chat').addClass('hide')
+  }
+}); // jQuery End
+
+
+// Счётчик корзины
+const cardBlocks = document.querySelectorAll(".mrk-cart-quantity")
+
+const quantityHTML = `
+<div class="quantity btn btn-outline-primary d-flex justify-content-center align-items-center">
+<button type="button" class="minus input-group-text border-0 text-primary py-0">-</button>	<label class="screen-reader-text" >Количество товара</label>
+<input type="number" class="input-text qty text border-0 text-primary py-0" name="cart[111][qty]" value="1" aria-label="Количество товара" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+<button type="button" class="plus input-group-text border-0 text-primary py-0">+</button></div>
+`
+
+currentButton(cardBlocks, 'btn-order', quantityHTML)
+
+function currentButton (el, classAdd, elInnerHTML) {
+    el.forEach((block) => {
+        block.addEventListener("click", (event) => {
+            event.preventDefault();
+            if (event.target.classList.contains(classAdd)) {
+                block.innerHTML = elInnerHTML;
+            
+            }
+        });
+    });
+}
 //risize home
 if (document.querySelector('.body-home')) {
   let vp,
