@@ -409,13 +409,18 @@ $total_count = count( $gallery_attachment_ids );
                     ?>
 
                     <!-- слайдер с табами изображениями - НАЧАЛО -->
-                    <div class="col-lg-7">
+                    <div class="col-xxl-7 col-xl-6 col-lg-7">
                         <div class="row justify-content-xl-start justify-content-center">
 							<?php if ( $product_video) { ?> 
+
 								<div class="slider slider-horizontal">
+
 								<? } else { ?> 
+
 								<div class="slider slider-vertical">
+
 								<? } ?>
+                                
 								<div class="swiper slider__images order-2 slider__images--main slider__images-cotalog">
 									<div class="swiper-wrapper">
 										<?php if ( $product_video) {
@@ -542,7 +547,7 @@ $total_count = count( $gallery_attachment_ids );
 							</div>
 						</div>
                     </div>
-                    <div class="col-lg-5 my-auto">
+                    <div class="col-xxl-5 col-xl-6 col-lg-5 mt-md-0 mt-5">
                         <div class="card card-body border-0 mt-lg-0 mt-md-5 mt-4 pt-lg-0 pt-md-5 py-0 px-lg-3 px-0">
                             <?php
                             if( current_user_can('edit_pages') || current_user_can('yith_vendor')) { ?>
