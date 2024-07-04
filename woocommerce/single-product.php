@@ -27,8 +27,15 @@ $_product_url = get_permalink( $_product->get_id() );
 // var_dump( get_post_meta(get_the_ID()) );
 $current_user = wp_get_current_user();
 $user_id =  $current_user->ID;
-$vendor = yith_get_vendor('current', 'user');
-$product_vendor = yith_get_vendor(true, 'product');
+
+$vendor = false;
+$product_vendor = false;
+if ( function_exists( 'YITH_Vendors' ) )  {
+    $vendor = yith_get_vendor('current', 'user');
+    $product_vendor = yith_get_vendor(true, 'product');
+}
+
+
 
 // $vendor = yith_get_vendor( $user_id, 'user' );
 // $vendor_user_id = $vendor->get_owner();
@@ -409,18 +416,13 @@ $total_count = count( $gallery_attachment_ids );
                     ?>
 
                     <!-- слайдер с табами изображениями - НАЧАЛО -->
-                    <div class="col-xxl-7 col-xl-6 col-lg-7">
+                    <div class="col-lg-7">
                         <div class="row justify-content-xl-start justify-content-center">
-							<?php if ( $product_video) { ?> 
-
+							<?php if ( $product_video) { ?>
 								<div class="slider slider-horizontal">
-
-								<? } else { ?> 
-
+								<? } else { ?>
 								<div class="slider slider-vertical">
-
 								<? } ?>
-                                
 								<div class="swiper slider__images order-2 slider__images--main slider__images-cotalog">
 									<div class="swiper-wrapper">
 										<?php if ( $product_video) {
@@ -533,10 +535,10 @@ $total_count = count( $gallery_attachment_ids );
 													<div class="swiper-slide swiper-item"><img src="<?= wp_get_attachment_url( $gallery_attachment_id, 'thumb' ); ?>" alt="thumb"></div>
 
 												<?php
-												} else {  
+												} else {
 												?>
 													<div class="swiper-slide swiper-item"></div>
-													
+
 												<?php
 												}}
 											}
@@ -547,7 +549,7 @@ $total_count = count( $gallery_attachment_ids );
 							</div>
 						</div>
                     </div>
-                    <div class="col-xxl-5 col-xl-6 col-lg-5 mt-md-0 mt-5">
+                    <div class="col-lg-5 my-auto">
                         <div class="card card-body border-0 mt-lg-0 mt-md-5 mt-4 pt-lg-0 pt-md-5 py-0 px-lg-3 px-0">
                             <?php
                             if( current_user_can('edit_pages') || current_user_can('yith_vendor')) { ?>
@@ -555,7 +557,7 @@ $total_count = count( $gallery_attachment_ids );
                                     <a href="">
                                         <span class="text-accent fw-bold d-lg-none d-block">Услуги</span>
                                     </a>
-                                    <?php if ($vendor->id == $product_vendor->id) : ?>
+                                    <?php if ($vendor && $vendor->id == $product_vendor->id) : ?>
                                         <a href="/edit-product/?edit-id=<?php echo $_product->get_id(); ?>" class="text-secondary badge fw-normal me-0" role="button">
                                             Редактировать
                                             <span class="d-inline-block align-middle">
@@ -809,7 +811,7 @@ $total_count = count( $gallery_attachment_ids );
                         </div>
                     </div>
                 </div>
-                <!--Блок Готовые решения - Чат --> 
+                <!--Блок Готовые решения - Чат -->
                 <div class="row mx-0 px-0">
                     <div class="col-lg-4 ps-0">
                         <div class="pch-project-chat hide ps-0 w-100">
@@ -845,7 +847,7 @@ $total_count = count( $gallery_attachment_ids );
                         </div>
                     </div>
                     <div class="col-lg-8 pe-0">
-                        
+
                         <div class="ready-made-solutions mt-4">
                             <h2 class="display-5 text-primary fw-bold mt-md-0 my-4">Готовые решения</h2>
                             <nav aria-label="breadcrumb" class="wc-breadcrumb breadcrumb-scroller pb-2">
@@ -854,9 +856,9 @@ $total_count = count( $gallery_attachment_ids );
 
                             <div class="d-flex justify-content-between align-items-start mb-2" style=
                             "height: 44px;">
-                                <span class="text-secondary">Открытый канал</span> 
+                                <span class="text-secondary">Открытый канал</span>
                                 <div class="d-flex align-items-start gap-3">
-                                    
+
                                     <div class="pch-chat-menu">
                                         <div class="text-end">
                                             <a href="" role="button" class="ms-1 ms-md-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-search" aria-expanded="false" aria-controls="collapse-search">
@@ -872,7 +874,7 @@ $total_count = count( $gallery_attachment_ids );
                                                 </svg>
                                                 <span class="visually-hidden-focusable">Search</span>
                                             </a>
-                                            
+
                                             <a class="collapsed ps-1" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.125 15C3.125 14.8342 3.19085 14.6753 3.30806 14.5581C3.42527 14.4408 3.58424 14.375 3.75 14.375H16.25C16.4158 14.375 16.5747 14.4408 16.6919 14.5581C16.8092 14.6753 16.875 14.8342 16.875 15C16.875 15.1658 16.8092 15.3247 16.6919 15.4419C16.5747 15.5592 16.4158 15.625 16.25 15.625H3.75C3.58424 15.625 3.42527 15.5592 3.30806 15.4419C3.19085 15.3247 3.125 15.1658 3.125 15ZM3.125 10C3.125 9.83424 3.19085 9.67527 3.30806 9.55806C3.42527 9.44085 3.58424 9.375 3.75 9.375H16.25C16.4158 9.375 16.5747 9.44085 16.6919 9.55806C16.8092 9.67527 16.875 9.83424 16.875 10C16.875 10.1658 16.8092 10.3247 16.6919 10.4419C16.5747 10.5592 16.4158 10.625 16.25 10.625H3.75C3.58424 10.625 3.42527 10.5592 3.30806 10.4419C3.19085 10.3247 3.125 10.1658 3.125 10ZM3.125 5C3.125 4.83424 3.19085 4.67527 3.30806 4.55806C3.42527 4.44085 3.58424 4.375 3.75 4.375H16.25C16.4158 4.375 16.5747 4.44085 16.6919 4.55806C16.8092 4.67527 16.875 4.83424 16.875 5C16.875 5.16576 16.8092 5.32473 16.6919 5.44194C16.5747 5.55915 16.4158 5.625 16.25 5.625H3.75C3.58424 5.625 3.42527 5.55915 3.30806 5.44194C3.19085 5.32473 3.125 5.16576 3.125 5Z" fill="#262626"/>
@@ -933,9 +935,9 @@ $total_count = count( $gallery_attachment_ids );
                                         <div>
                                             <p class="text-secondary mb-2">@Константин Комков</p>
                                             <p class="text-secondary mb-0">03.07.2022</p>
-                                        </div>				
-                                        <div class="dropdown"> 
-                                            <button class="btn btn-secondary dropdown-toggle me-1 mb-1" type="button" id="dropdownRightMenuButtonDots" data-bs-toggle="dropdown" aria-expanded="false"> 
+                                        </div>
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle me-1 mb-1" type="button" id="dropdownRightMenuButtonDots" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M5 10C5.53043 10 6.03914 10.2107 6.41421 10.5858C6.78929 10.9609 7 11.4696 7 12C7 12.5304 6.78929 13.0391 6.41421 13.4142C6.03914 13.7893 5.53043 14 5 14C4.46957 14 3.96086 13.7893 3.58579 13.4142C3.21071 13.0391 3 12.5304 3 12C3 11.4696 3.21071 10.9609 3.58579 10.5858C3.96086 10.2107 4.46957 10 5 10ZM12 10C12.5304 10 13.0391 10.2107 13.4142 10.5858C13.7893 10.9609 14 11.4696 14 12C14 12.5304 13.7893 13.0391 13.4142 13.4142C13.0391 13.7893 12.5304 14 12 14C11.4696 14 10.9609 13.7893 10.5858 13.4142C10.2107 13.0391 10 12.5304 10 12C10 11.4696 10.2107 10.9609 10.5858 10.5858C10.9609 10.2107 11.4696 10 12 10ZM19 10C19.5304 10 20.0391 10.2107 20.4142 10.5858C20.7893 10.9609 21 11.4696 21 12C21 12.5304 20.7893 13.0391 20.4142 13.4142C20.0391 13.7893 19.5304 14 19 14C18.4696 14 17.9609 13.7893 17.5858 13.4142C17.2107 13.0391 17 12.5304 17 12C17 11.4696 17.2107 10.9609 17.5858 10.5858C17.9609 10.2107 18.4696 10 19 10Z" fill="black"/>
                                                 </svg>
@@ -983,9 +985,9 @@ $total_count = count( $gallery_attachment_ids );
                                         <div>
                                             <p class="text-secondary mb-2">@Константин Комков</p>
                                             <p class="text-secondary mb-0">03.07.2022</p>
-                                        </div>				
-                                        <div class="dropdown"> 
-                                            <button class="btn btn-secondary dropdown-toggle me-1 mb-1" type="button" id="dropdownRightMenuButtonDots" data-bs-toggle="dropdown" aria-expanded="false"> 
+                                        </div>
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle me-1 mb-1" type="button" id="dropdownRightMenuButtonDots" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M5 10C5.53043 10 6.03914 10.2107 6.41421 10.5858C6.78929 10.9609 7 11.4696 7 12C7 12.5304 6.78929 13.0391 6.41421 13.4142C6.03914 13.7893 5.53043 14 5 14C4.46957 14 3.96086 13.7893 3.58579 13.4142C3.21071 13.0391 3 12.5304 3 12C3 11.4696 3.21071 10.9609 3.58579 10.5858C3.96086 10.2107 4.46957 10 5 10ZM12 10C12.5304 10 13.0391 10.2107 13.4142 10.5858C13.7893 10.9609 14 11.4696 14 12C14 12.5304 13.7893 13.0391 13.4142 13.4142C13.0391 13.7893 12.5304 14 12 14C11.4696 14 10.9609 13.7893 10.5858 13.4142C10.2107 13.0391 10 12.5304 10 12C10 11.4696 10.2107 10.9609 10.5858 10.5858C10.9609 10.2107 11.4696 10 12 10ZM19 10C19.5304 10 20.0391 10.2107 20.4142 10.5858C20.7893 10.9609 21 11.4696 21 12C21 12.5304 20.7893 13.0391 20.4142 13.4142C20.0391 13.7893 19.5304 14 19 14C18.4696 14 17.9609 13.7893 17.5858 13.4142C17.2107 13.0391 17 12.5304 17 12C17 11.4696 17.2107 10.9609 17.5858 10.5858C17.9609 10.2107 18.4696 10 19 10Z" fill="black"/>
                                                 </svg>
@@ -1019,14 +1021,14 @@ $total_count = count( $gallery_attachment_ids );
                                             <li>
                                                 <a class="pch-chat-item" href="#">Хочу заработать</a>
                                                 <span class="pch-chat-group">открытая группа</span>
-                                            </li>   
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="mt-5">
                                         <div class="d-flex flex-md-nowrap flex-wrap gap-md-0 gap-4 mb-5">
                                             <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/gallery-chat/card-img1.jpg" alt="" style="width: 122px;"></div>
                                             <div class="flex-grow-1 py-0">
-                                                <div class="row g-3"> 
+                                                <div class="row g-3">
                                                     <div class="col-xl-8 col-lg-7">
                                                         <a class="d-block fw-semibold fs-6 mb-3" href="">Купить билет на главное вечернее шоу фестиваля</a>
                                                         <p>Скидка 50% за 3 месяца до начала праздника и VIP обслуживание  ...</p>
@@ -1035,7 +1037,7 @@ $total_count = count( $gallery_attachment_ids );
                                                         <div class="mt-auto text-lg-center">
                                                             <h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
                                                             <span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
-                                                        </div> 
+                                                        </div>
                                                         <div class="mrk-cart d-flex align-items-center justify-content-lg-end">
                                                             <div class="mrk-cart-quantity">
                                                                 <a href="#" class="btn btn-primary btn-order w-100">
@@ -1044,7 +1046,7 @@ $total_count = count( $gallery_attachment_ids );
                                                                 </a>
                                                             </div>
                                                             <div class="mrk-card-heart no-active ms-xl-3 ms-2"></div>
-                                                        </div> 
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1052,7 +1054,7 @@ $total_count = count( $gallery_attachment_ids );
                                         <div class="d-flex flex-md-nowrap flex-wrap gap-md-0 gap-4 mb-5">
                                             <div class="flex-shrink-0"><img class="object-fit-contain me-4" src="<?= get_stylesheet_directory_uri(); ?>/img/gallery-chat/card-img2.jpg" alt="" style="width: 122px;"></div>
                                             <div class="flex-grow-1 py-0">
-                                                <div class="row g-3"> 
+                                                <div class="row g-3">
                                                     <div class="col-xl-8 col-lg-7">
                                                         <a class="d-block fw-semibold fs-6 mb-3" href="">Купить билет на главное вечернее шоу фестиваля</a>
                                                         <p>Скидка 50% за 3 месяца до начала праздника и VIP обслуживание  ...</p>
@@ -1061,7 +1063,7 @@ $total_count = count( $gallery_attachment_ids );
                                                         <div class="mt-auto text-lg-center">
                                                             <h3 class="text-primary fw-bold text-nowrap d-inline-block">1 777 ₽</h3>
                                                             <span class="text-decoration-line-through fs-5 ps-2">1 721 ₽</span>
-                                                        </div> 
+                                                        </div>
                                                         <div class="mrk-cart d-flex align-items-center justify-content-lg-end">
                                                             <div class="mrk-cart-quantity">
                                                                 <a href="#" class="btn btn-primary btn-order w-100">
@@ -1070,7 +1072,7 @@ $total_count = count( $gallery_attachment_ids );
                                                                 </a>
                                                             </div>
                                                             <div class="mrk-card-heart no-active ms-xl-3 ms-2"></div>
-                                                        </div> 
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1510,7 +1512,7 @@ $total_count = count( $gallery_attachment_ids );
                 </div>
             </div>
             <div class="col-lg-9">
-              
+
               <div class="row">
                 <h2 class="block-title pb-md-5 pb-3">Предложения других продавцов</h2>
                 <div class="d-lg-block">

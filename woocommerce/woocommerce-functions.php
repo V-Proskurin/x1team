@@ -125,6 +125,9 @@ function my_account_menu( $menu_links ){
 
 add_filter( 'woocommerce_get_endpoint_url', 'my_account_menu_endpoint', 10, 4 );
 function my_account_menu_endpoint( $url, $endpoint, $value, $permalink ) {
+
+    if ( ! function_exists( 'YITH_Vendors' ) ) return;
+
     if ( $endpoint === 'ads' ) {
         $current_user = wp_get_current_user();
         $user_id =  $current_user->ID;
@@ -200,6 +203,7 @@ function edit_link_after_btn_card() {
         // $user_lastname =  $current_user->user_lastname;
         // $user_display_name =  $current_user->display_name;
         $user_id =  $current_user->ID;
+        if ( ! function_exists( 'YITH_Vendors' ) ) return;
 
         $vendor = yith_get_vendor( $product->get_id(), 'product' );
         $vendor_user_id = $vendor->get_owner();

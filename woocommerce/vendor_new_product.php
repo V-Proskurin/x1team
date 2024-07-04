@@ -5,6 +5,12 @@ Template Name: Сreate Vendor Product
 
 
 get_header();
+
+
+if ( function_exists( 'YITH_Vendors' ) )  {
+
+
+
 $vendor = yith_get_vendor('current', 'user');
 ?>
     <div class="container-sm text-md-center my-md-0 my-4">
@@ -120,9 +126,11 @@ $vendor = yith_get_vendor('current', 'user');
         </div>
     </div>
 
-
-
 <?php
+} else {
+    echo "Плагин вендора не установлен";
+}
+
 
 get_header();
 
