@@ -109,7 +109,7 @@ if( $current_user->exists() ){
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-lg-0 mt-3">
                   <li class="nav-item"> <a class="nav-link py-lg-0" href="/shop/">Каталог</a></li>
                   <li class="nav-item"><a class="nav-link py-lg-0" href="/blockly/">Blockly</a></li>
-                  <li class="nav-item"><a class="nav-link py-lg-0" href="/unity/">Unity</a></li>
+                  <li class="nav-item"><a class="nav-link py-lg-0" href="/unity/football">Unity</a></li>
                   <li class="nav-item d-lg-none d-block"> <a class="nav-link" href="/my-account/">Войти</a></li>
                 </ul>
                 <div class="phone d-lg-none d-inline-block">
@@ -120,7 +120,7 @@ if( $current_user->exists() ){
                   </a>
                 </div>
               </div>
-              <?php woocommerce_breadcrumb(['home'=>' '])?> 
+              <?php woocommerce_breadcrumb(['home'=>' '])?>
             </div>
           </div>
         </div>

@@ -109,7 +109,7 @@ if( $current_user->exists() ){
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-lg-0 mt-3">
                     <li class="nav-item"> <a class="nav-link" href="/shop/">Каталог</a></li>
                     <li class="nav-item"><a class="nav-link" href="/blockly/">Blockly</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/unity/">Unity</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/unity/football">Unity</a></li>
                     <?php
                       if( ! $current_user->exists() ){
                         ?>
